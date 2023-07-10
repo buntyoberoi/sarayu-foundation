@@ -1,0 +1,72 @@
+	{% block html_head_container %}
+		{% include 'html-header.twig' %}
+		{% block head %}
+		{% endblock %}
+		</head>
+	{% endblock %}
+
+	<body class="{{body_class}}" data-template="base.twig">
+		<a class="skip-link screen-reader-text" href="#content">{{ _e( 'Skip to content') }}</a>
+
+		{# Primary Header #}
+ 		<header>
+ 			<div class="container mx-auto px-4"> 
+				<nav class="py-2 px-0">
+				    <i class='bx bx-menu'></i>
+					<a class="logo" href="#"><img src="/wp-content/themes/cinqo-me/assets/src/img/logo.svg"></a>
+				    <div class="nav-links">
+				      <div class="sidebar-logo"> 
+				        <span class="logo-name">Logo</span> 
+				        <i class='bx bx-x' ></i>
+				      </div> 
+				      <ul class="links">
+				        <li><a class="font-RajdhaniSemiBold" href="#">GROUP.</a></li>
+				        <li><a class="font-RajdhaniSemiBold" href="#">FAQS. </a></li>
+				        <li>
+				        	<a class="font-RajdhaniSemiBold" href="#">NEWS.</a>
+				        	<i class='bx bxs-chevron-down arrow1 arrow'></i>
+				        	<ul class="htmlCss-sub-menu sub-menu">
+				            <li><a class="font-RajdhaniSemiBold" href="#">Web Design</a></li>
+				            <li><a class="font-RajdhaniSemiBold" href="#">Login Forms</a></li>
+				            <li><a class="font-RajdhaniSemiBold" href="#">Card Design</a></li>
+				            <li class="more">
+				              <a class="font-RajdhaniSemiBold" href="#">More</a>
+				                <i class='bx bxs-chevron-right arrow arrow2'></i>
+				              <ul class="more-sub-menu sub-menu">
+				                <li><a class="font-RajdhaniSemiBold" href="#">Neumorphism</a></li>
+				                <li><a class="font-RajdhaniSemiBold" href="#">Pre-loader</a></li>
+				                <li><a class="font-RajdhaniSemiBold" href="#">Glassmorphism</a></li>
+				              </ul>
+				            </li>
+				          </ul>
+				        </li>
+				        <li><a class="font-RajdhaniSemiBold" href="#">CSR.</a></li>
+				        <li><a class="font-RajdhaniSemiBold" href="#">CONTACT US</a></li>
+				      </ul>
+				    </div> 
+				</nav>
+			</div>
+		</header>
+
+		<section id="content" role="main" class="content-wrapper">
+			{% if title %}<h1>{{title}}</h1>{% endif %}
+			<div class="wrapper {{sidebar_class}}">
+				{% block content %}
+				Sorry, no content
+				{% endblock %}
+			</div>
+			{% if sidebar %}
+			<aside class="layout-sidebar">
+				{{sidebar}}
+			</aside>
+			{% endif %}
+		</section>
+
+		{% block footer %}
+		<footer class="footer pt-12">
+			{% include 'footer.twig' %}
+		</footer>
+		{{ function('wp_footer') }}
+		{% endblock %}
+	</body>
+	</html>
