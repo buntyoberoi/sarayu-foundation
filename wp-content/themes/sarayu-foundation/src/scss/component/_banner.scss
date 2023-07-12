@@ -1,0 +1,75 @@
+ // Banner Faculty Alfaisal
+
+.f-alfaisal-banner {
+  height: 530px;
+  position: relative;
+  @include mobile-devices() {
+    height: 385px;
+  }
+  img {
+    width: 100%;
+    height: 530px;
+    @include mobile-devices() {
+      height: 385px;
+    }
+  }
+  .f-alfaisal-search {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  label {
+    display: none;
+  }
+  input[type=text] {
+    font-size: 1rem;
+    font-family: 'droid-sans';
+    color: $blue-primary-color;
+    width: 330px;
+    height: 44px;
+    padding: 10px 34px 10px 10px;
+    border-radius: 10px;
+    border: none;
+    @include mobile-devices() {
+      width: 258px;
+      height: 36px;
+    }
+    &:focus-visible {
+      outline: none;
+    }
+  }
+  input[type=submit] {
+    border: none;
+    outline: none;
+    background: url(../images/search-icon.svg) no-repeat;
+    background-size: contain;
+    cursor: pointer;
+    font-size: 0;
+    display: block;
+    width: 22px;
+    height: 22px;
+    position: absolute;
+    top: 10px;
+    right: 8px;
+    @include mobile-devices() {
+      width: 18px;
+      height: 18px;
+    }
+  }
+  ::placeholder { 
+    color: $blue-primary-color;
+    font-family: 'droid-sans';
+  }
+
+}
+// Blue LIne on the top of The Banner
+  // .banner-title.publication, .banner-title.announcement, .banner-title.classes, .banner-title.presentation {
+  //   border-top: 10px solid $blue-five;
+
+  // }
+  .f-alfaisal-individual-colleges-detail h2 {
+    margin: 0 -82px 30px;
+      margin-bottom: 30px;
+    border-top: 10px solid #003257;
+  }

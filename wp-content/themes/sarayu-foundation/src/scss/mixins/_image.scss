@@ -1,0 +1,67 @@
+// Top of the secton
+@mixin boder-top-image() {
+	&:before {
+		background: $image-border;
+		content: "";
+		width: 100%;
+		height: 8px;
+		top: 0;
+		right: initial;
+		position: absolute;
+		display: inline-block;
+		left: 0;
+		background-repeat: no-repeat;
+		background-size: 100% 100%;
+	}
+}
+
+// Bottom of the secton
+@mixin boder-bottom-image() {
+	&:after {
+		background: $image-border;
+		content: "";
+		width: 100%;
+		height: 8px;
+		bottom: 0;
+		right: initial;
+		position: absolute;
+		display: inline-block;
+		left: 0;
+		background-repeat: no-repeat;
+		background-size: 100% 100%;
+	}
+}
+
+// Contact form Top of the secton
+@mixin form-top-image() {
+	&:after {
+		background: $form-color-border;
+		content: "";
+		width: 100%;
+		height: 8px;
+		top: 0;
+		right: initial;
+		position: absolute;
+		display: inline-block;
+		left: 0;
+		background-repeat: no-repeat;
+		background-size: 100% 100%;
+	}
+}
+
+// Contact form Bottom of the secton
+@mixin form-bottom-image() {
+	&:before {
+		background: $form-color-border;
+		content: "";
+		width: 100%;
+		height: 8px;
+		bottom: 0;
+		right: initial;
+		position: absolute;
+		display: inline-block;
+		left: 0;
+		background-repeat: no-repeat;
+		background-size: 100% 100%;
+	}
+}

@@ -1,2 +1,7 @@
-@import 'home';
-@import 'custom';
+//custom scss
+@import "variables/include";
+@import "mixins/include";
+@import "base/include";
+@import "layout/include";
+@import "component/include";
+@import "page/include";

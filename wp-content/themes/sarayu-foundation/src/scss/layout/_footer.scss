@@ -1,0 +1,18 @@
+// Footer Css 
+footer {
+	padding: 60px 0;
+	background-color: #555;
+	line-height: 1.5;
+	position: fixed;
+	width: 100%;
+	bottom: 0;
+	.footer-items {
+		display: flex;
+		flex-wrap: wrap;
+		flex: 0 0 100%;
+		justify-content: space-between;
+		.item {
+			flex: 0 0 22%;
+		}
+	}
+}

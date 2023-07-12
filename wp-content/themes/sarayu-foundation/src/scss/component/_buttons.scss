@@ -1,0 +1,10 @@
+// Back To Top
+#backtotop {
+ border-radius: 50%;
+    background-size: contain;
+    height: 56px;
+    width: 56px;
+     &:focus {
+     opacity: unset;
+   }
+}

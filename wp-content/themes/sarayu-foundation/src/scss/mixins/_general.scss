@@ -1,0 +1,29 @@
+@mixin poly($property, $max, $min, $desktop, $mobile) {
+  #{$property}: #{$max}px;
+  @media (max-width: #{$desktop}px) {
+    #{$property}: calc(
+      #{$min}px + (#{$max} - #{$min}) * (100vw - #{$mobile}px) /
+        (#{$desktop} - #{$mobile})
+    );
+  }
+}
+
+@mixin polycalc($property, $max, $min, $desktop, $mobile) {
+  @media (min-width: #{$mobile}px) and (max-width: #{$desktop}px) {
+    #{$property}: calc(
+      #{$min}px + (#{$max} - #{$min}) * (100vw - #{$mobile}px) /
+        (#{$desktop} - #{$mobile})
+    );
+  }
+}
+
+@mixin flex($align, $justify: null, $wrap: null) {
+  display: flex;
+  align-items: $align;
+  justify-content: $justify;
+  @if ($wrap != null) {
+    flex-wrap: nowrap;
+  } @else {
+    flex-wrap: wrap;
+  }
+}

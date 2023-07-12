@@ -1,0 +1,20 @@
+// Global Body Css Here
+body {
+	font-family: droid-sans;
+	font-size: .9rem;
+	margin: 0;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+	box-sizing: border-box;
+}
+
+.container {
+	width: 100%;
+	max-width: 1366px;
+	padding: 0 78px;
+	margin: auto;
+}

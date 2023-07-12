@@ -1,0 +1,127 @@
+.ui-widget-content {
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  border: none !important;
+  background: $gray-primary-colors;
+  border-radius: 30px;
+  padding: 15px 20px;
+  max-width: 350px;
+  width: 100% !important;
+  @include mobile-devices() {
+    max-width: 300px;
+  }
+  .ui-dialog-titlebar {
+    padding: 0;
+    background: #1A36AC22;
+    border: none;
+    .ui-dialog-title {
+      color: $black-primary-colors;
+      font-family: 'droid-sans';
+      font-weight: bold;
+      font-size: 1.3rem;
+    }
+    .ui-corner-all {
+      border-radius: 50%;
+      width: 22px !important;
+      &:focus {
+        border: none;
+        outline: none;
+      }
+      &:active {
+        border: none;
+        background: #ededed;
+      }
+      .ui-icon {
+        &:focus-visible {
+          outline: none;
+        }
+      }
+    }
+  }
+
+  .ui-dialog-content {
+    box-shadow: none;
+    overflow: unset;
+    padding: 50px 0 0 0;
+    position: relative;
+    &:after {
+      content: "";
+      background: $white;
+      width: 350px;
+      height: 6px;
+      position: absolute;
+      top: 19px;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border-top: 1px solid $black-primary-colors;
+      border-bottom: 1px solid $black-primary-colors;
+      @include mobile-devices() {
+        width: 300px;
+      }
+    }
+    .form-item {
+      margin-bottom: 20px;
+    }
+    label {
+      display: none;
+    }
+    input {
+      font-family: 'droid-sans';
+      font-size: .8rem;
+      color: $black-primary-colors;
+      width: 100%;
+      outline: none;
+      border: 1px solid $black-primary-colors;
+      padding: 10px;
+      border-radius: 10px;
+      margin: 0;  
+    }
+    ::placeholder {
+      font-family: 'droid-sans';
+      font-weight: bold;
+      color: $black-primary-colors;
+    }
+    input[type="password"] {
+      position: relative;
+      &:before {
+        content:"";
+        background: url(../images/view.png) no-repeat;
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+    }
+    .description {
+      display: none;
+    }
+  }
+  .form-actions {
+    width: 100%;
+    button {
+      width: 100%;
+      margin: 25px 0 0;
+      padding: 13px 0;
+      background: $blue-primary-color;
+      color: $white;
+      font-family: 'droid-sans';
+      font-weight: bold;
+      text-transform: uppercase;
+      border: none;
+      border-radius: 10px;
+      @include mobile-devices() {
+        margin: 10px 0 0;
+      }
+    }
+  }
+  .ui-dialog-buttonpane {
+    box-shadow: none;
+    background: #1A36AC22;
+    border: none;
+    padding: 0 0 20px;
+  }
+}
+.ui-widget-overlay {
+  background: none;
+  opacity: 0;
+}
